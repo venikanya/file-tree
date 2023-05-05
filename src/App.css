@@ -1,38 +1,51 @@
 .App {
   text-align: center;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-size: 12px;
+    font-feature-settings: "liga" 0, "calt" 0;
+    font-variation-settings: normal;
+    line-height: 18px;
+    letter-spacing: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App.light {
+  background: #E2E2E2;
+  color: rgb(54,53,55);
+}
+.App.dark {
+  background: rgb(0,0,0);
+  color: rgb(250,250,250);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.WorkspaceBox {
   display: flex;
-  flex-direction: column;
+  height: 100vh;
+}
+
+.FileExplorer {
+  text-align: left;
+  border-right: 1px solid #d4d4d4;
+}
+
+.FileExplorer h1 {
+  padding: 0px 10px;
+}
+.FileHeader {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0px 10px;
+}
+.FileList {
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.FileRow {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.FileRow.active {
+  background-color: #d4d4d4;
 }
